@@ -103,13 +103,13 @@ Q(t+1)=T′Q(t)+TQ(t)′
 
 ### Procedure
 
-1.Using nand gates and wires construct sr flip flop.
+1.Using nand gates and wires construct SR flip flop.
 
 2.Repeat same steps to construct JK,D,T flipflops.
 
 3.Find Rtl logic and timing diagram for all flipflops.
 
-4.end the program.
+4.End the program.
 
 
 
@@ -137,7 +137,8 @@ endmodule
 
 ### TIMING DIGRAMS FOR FLIP FLOPS
 
-![ss-1 2](https://user-images.githubusercontent.com/93427208/168047165-fa0efcf4-5a62-472f-bca9-6108e95e9400.png)
+![image](https://github.com/Nethraa24/Experiment--05-Implementation-of-flipflops-using-verilog/assets/121215786/8d4eab55-5db9-47d8-99a1-2234b9146d1d)
+
 
 ### PROGRAM 2
 

@@ -119,8 +119,9 @@ Q(t+1)=T′Q(t)+TQ(t)′
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by: NETHRAA J
 RegisterNumber: 212222100031
+```
 
-module theq(S,R,Clock,Q,Qbar);
+module flipflops(S,R,Clock,Q,Qbar);
 input S,R,Clock;
 output Q,Qbar;
 wire X,Y;
@@ -129,7 +130,7 @@ nand (Y,R,Clock);
 nand (Q,X,Qbar);
 nand(Qbar,Y,Q);
 endmodule
-
+```
 
 ### RTL LOGIC FOR FLIPFLOPS 
 
@@ -142,39 +143,44 @@ endmodule
 
 ### PROGRAM 2
 
-
-module theq(j,k,clk,q,qbar);
-input j,k,clk;
-output q,qbar;
-wire x,y;
-nand(x,j,clk,qbar);
-nand(y,k,clk,q);
-nand(q,x,qbar);
-nand(qbar,y,q);
+```
+module jkflipflop(J,K,clk,Q,Qbar);
+input J,K,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=(J&(~Q))|((~K)&Q);
+Qbar=((~J)&(Qbar))|K&(~Qbar);
+end
 endmodule
-
+```
 ### RTL LOGIC FOR FLIPFLOPS 
 
 ![SS-2](https://user-images.githubusercontent.com/93427208/168047690-0cfe25d6-907e-47c5-b767-324332c6ac3b.png)
 
 ### TIMING DIGRAMS FOR FLIP FLOPS
 
-![SS-2 1](https://user-images.githubusercontent.com/93427208/168047919-8ba30a5e-7f6c-40bd-b11a-49c1337be605.png)
+
 
 ### PROGRAM 3
 
-
-module theq(q,qbar,d1,clk);
-input d1,clk;
-output q,qbar;
-wire P;
-wire H;
-not(x,d1);
-nand(P,clk,d1);
-nand(H,clk,x);
-nand(q,H,qbar);
-nand(qbar,P,q);
-endmodule 
+```
+module dflipflop(D,clk,Q,Qbar);
+input D,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=D;
+Qbar=~D;
+end
+endmodule
+```
 
 ### RTL LOGIC FOR FLIPFLOPS 
 
@@ -182,28 +188,31 @@ endmodule
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
 
-![ss-3 1](https://user-images.githubusercontent.com/93427208/168048883-99578a63-3d04-47f0-b5d0-46e7f3c53c95.png)
+![image](https://github.com/Nethraa24/Experiment--05-Implementation-of-flipflops-using-verilog/assets/121215786/9d81d59d-1ef2-4f07-a4d3-5ce679901cc8)
+
 
 ### PROGRAM 4
 
-
-module theq(t,qbar,q,clk);
-input t,clk;
-output q,qbar;
-wire n1,n2;
-nand(n1,t,clk,qbar);
-nand(n2,clk,t,q);
-nand(q,n1,qbar);
-nand(qbar,n2,q);
+```
+module tflipflop(T,clk,Q,Qbar);
+input T,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=(T&(~Q))|((~T)&Q);
+Qbar=((~T)&Qbar)|(T&(~Qbar));
+end
 endmodule
+```
 
 ### RTL LOGIC FOR FLIPFLOPS
 
 ![ss-4](https://user-images.githubusercontent.com/93427208/168049356-18c2deac-86e4-4fb3-9d91-0c97040e977d.png)
 
 ### TIMING DIGRAMS FOR FLIP FLOPS
-
-![ss-4 1](https://user-images.githubusercontent.com/93427208/168054636-6eee6d92-ef38-4136-a63d-44674cd2fa4e.png)
 
 
 

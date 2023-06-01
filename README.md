@@ -144,7 +144,7 @@ endmodule
 ### PROGRAM 2
 
 ```
-module jkflipflop(J,K,clk,Q,Qbar);
+module JKflipflop(J,K,clk,Q,Qbar);
 input J,K,clk;
 output reg Q;
 output reg Qbar;
@@ -163,12 +163,13 @@ endmodule
 
 ### TIMING DIGRAMS FOR FLIP FLOPS
 
+![image](https://github.com/Nethraa24/Experiment--05-Implementation-of-flipflops-using-verilog/assets/121215786/457a3d0a-a92a-4f33-bf40-ba3a1a980abc)
 
 
 ### PROGRAM 3
 
 ```
-module dflipflop(D,clk,Q,Qbar);
+module d2flipflop(D,clk,Q,Qbar);
 input D,clk;
 output reg Q;
 output reg Qbar;
@@ -188,7 +189,8 @@ endmodule
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
 
-![image](https://github.com/Nethraa24/Experiment--05-Implementation-of-flipflops-using-verilog/assets/121215786/9d81d59d-1ef2-4f07-a4d3-5ce679901cc8)
+
+![image](https://github.com/Nethraa24/Experiment--05-Implementation-of-flipflops-using-verilog/assets/121215786/157bc7b3-99de-481e-b632-9271a1334bd1)
 
 
 ### PROGRAM 4
@@ -213,8 +215,7 @@ endmodule
 ![ss-4](https://user-images.githubusercontent.com/93427208/168049356-18c2deac-86e4-4fb3-9d91-0c97040e977d.png)
 
 ### TIMING DIGRAMS FOR FLIP FLOPS
-
-
+![image](https://github.com/Nethraa24/Experiment--05-Implementation-of-flipflops-using-verilog/assets/121215786/ad84b9f3-d488-4aab-9341-1044605094d8)
 
 ### RESULTS 
 Thus implementation of SR,JK,D and T flipflops using nand gates are completed sucessfully.
